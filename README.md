@@ -37,7 +37,9 @@ pip install -r requirements.txt
 ```
 
 ## runinig
+After activate python environment
 ```python
+cd face_detection
 python manage.py runserver
 
 ```
