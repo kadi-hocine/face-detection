@@ -1,11 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 # Brief projet : Cas Pratique 
 Réidentification faciale via une interface
 Du 28/6/2021 au 2/7/2021 et du 26/7/2021 au 28/7/2021

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{%  load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}
+                {% endblock %}</title>
+<!--            <link rel="stylesheet" type="text/css" href="{% static 'css/beautiful.css' %}">-->
+        {% block stylesheet %}
+        {% endblock %}
+        <link rel="stylesheet" href="{% static 'css/base_css.css' %}" />
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+           <!-- <img src="https://simplon.co/storage/2693/responsive-images/logo-simplon_23___thumb_500_128.png" alt=""> -->
+           <a href="https://simplon.co/" target="_blank">
+            <img src="\static\images\logo-simplon.png" alt="" style="width:100px;height:50px;" >
+           </a>
+
+          </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/listCustomers">Customers list</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/searchCustomer">Search a customer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/addCustomer">Add a customer</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+        {% block content %}
+
+        {% endblock %}
+    </body>
+</html>

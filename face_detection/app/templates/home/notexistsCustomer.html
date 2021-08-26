@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Records</title>
+
+    </head>
+
+    <body>
+      {% block content %}
+      <main role="main" class="container">
+        <div class="jumbotron text-center">
+          <h1> Any customer in the database </h1>
+          <br>
+          <br>
+          <a href="/addCustomer"  class="btn btn-primary"> Return to add this new customer</a>
+        </div>
+    
+        <table class="table table-striped table-bordered table-sm">  
+          <thead class="thead-dark">  
+          <tr>  
+   
+              <th>List of detected persons </th>  
+            
+          </tr>  
+          </thead>  
+          <tbody>  
+      {% for customer_out in customers_out %}  
+          <tr>  
+              <td><img src={{ customer_out }}></td>
+          </tr>  
+      {% endfor %}  
+          </tbody>  
+      </table>  
+    </main>
+
+      {% endblock %}
+    </body>
+    </html>

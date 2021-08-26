@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>  
+    <html lang="en">  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>Index</title>  
+    </head>  
+    <body>  
+      {% block content %}
+
+
+    <form method="POST" class="post-form" >
+            {% csrf_token %}  
+      <div>
+            <main role="main" class="container">
+              <div class="jumbotron text-center">
+                  <h1>Modifier les informations des employés</h1>
+              </div>
+          </main>
+      
+      <div class="form-group col">  
+        <label class="col-sm-2 col-form-label">Prénom:</label>
+        <div class="col-sm-4">  
+            <input type="text" name="prenom" id="id_ename" required maxlength="100" value="{{ employee.prenom }}" />
+        </div>  
+      </div>  
+
+        <div class="form-group col">  
+        <label class="col-sm-2 col-form-label">Nom:</label>
+        <div class="col-sm-4">  
+            <input type="text" name="nom" id="id_nom" required maxlength="254" value="{{ employee.nom }}" />
+        </div>  
+      </div>  
+
+        <div class="form-group col">  
+        <label class="col-sm-2 col-form-label">Ville:</label>
+        <div class="col-sm-4">  
+            <input type="text" name="ville" id="id_ville" required maxlength="15" value="{{ employee.ville }}" />
+        </div>  
+      </div>
+
+      <div class="form-group col">
+        <label class="col-sm-2 col-form-label">Salaire:</label>
+        <div class="col-sm-4">
+            <input type="number" name="salaire" id="id_salaire" required maxlength="15" value="{{ employee.salaire }}" />
+        </div>
+      </div>
+
+      <div class="form-group col">
+        <label class="col-sm-2 col-form-label">Age:</label>
+        <div class="col-sm-4">
+            <input type="number" name="age" id="id_age" required maxlength="15" value="{{ employee.age }}" />
+        </div>
+      </div>
+
+      <div class="form-group col">
+        <label class="col-sm-2 col-form-label">Poste:</label>
+        <div class="col-sm-4">
+            <input type="text" name="poste" id="id_poste" required maxlength="15" value="{{ employee.poste }}" />
+        </div>
+      </div>
+
+      <div class="form-group col">
+        <label class="col-sm-2 col-form-label">Département:</label>
+        <div class="col-sm-4">
+            <input type="number" name="departement" id="id_department" required maxlength="15" value="{{ employee.departement_id }}" />
+            <br>
+            <p>Le département {{ employee.departement_id }} correspond au : {{ employee.departement}}</p>
+        </div>
+      </div>
+
+        <div class="form-group col">  
+        <label class="col-sm-1 col-form-label"></label>  
+        <div class="col-sm-4">  
+        <button type="submit" class="btn btn-success">Modifier</button>  
+        </div>  
+      </div>  
+
+        </div>  
+    </form>  
+    {% endblock %}
+    </body>  
+    </html>  

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Records</title>
+
+    </head>
+
+    <body>
+      {% block content %}
+      <main role="main" class="container">
+        <div class="jumbotron text-center">
+          <h1> This customer already extists </h1>
+          <br>
+          <br>
+          <a href="/addCustomer"  class="btn btn-primary"> Return to add new customer</a>
+        </div>
+    
+    
+    </main>
+
+      {% endblock %}
+    </body>
+    </html>

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Records</title>
+
+    </head>
+
+    <body>
+      {% block content %}
+      <main role="main" class="container">
+        <div class="jumbotron text-center">
+
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label"><b>Enter customer's infos :</b></label>
+        <div class="col-sm-4">
+            <form method="POST" class="post-form" enctype="multipart/form-data">
+              {% csrf_token %}
+                <div class="col-sm-4">
+               <!-- <input type="number" name="id", required maxlength="254"  /> -->
+               {{ form.as_p }}
+               <div class="col-sm-4">
+                <button type="submit" class="btn btn-success">Add customer</button>
+                </div>
+             </form>
+
+             {% if img_obj %}
+               <h3>Succesfully uploaded : {{img_obj.first_name}}</h3>
+               <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+             {% endif %}
+        </div>
+        </div>
+
+      </div>
+      </main>
+      
+  
+<!-- 
+          <div class="form-group col">
+                <label class="col-sm-2 col-form-label"> Prénom:</label>
+                <div class="col-sm-4">
+                  <b>{{ employee.prenom }}</b>
+                </div>
+          </div>
+     <div class="form-group col">
+            <label class="col-sm-2 col-form-label"> Nom:</label>
+            <div class="col-sm-4">
+              <b>{{ employee.nom }}</b>
+            </div>
+
+          </div>
+          <div class="form-group col">
+            <label class="col-sm-2 col-form-label"> Age :</label>
+            <div class="col-sm-4">
+              <b>{{ employee.age }}</b>
+            </div>
+          </div>
+
+          <div class="form-group col">
+            <label class="col-sm-2 col-form-label">Poste:</label>
+            <div class="col-sm-4">
+              <b>{{ employee.poste }}</b>
+            </div>
+          </div>
+        </div>
+          <div class="form-group col">
+            <label class="col-sm-2 col-form-label">Ville:</label>
+            <div class="col-sm-4">
+              <b>{{ employee.ville }}</b>
+            </div>
+    
+          </div>
+    
+          <div class="form-group col">
+            <label class="col-sm-2 col-form-label">Salaire:</label>
+            <div class="col-sm-4">
+              <b>{{ employee.salaire }}</b>
+            </div>
+          </div>
+    
+          <div class="form-group col">
+            <label class="col-sm-2 col-form-label">Département:</label>
+            <div class="col-sm-4">
+              <b>{{ employee.departement }}</b> -->
+            <!-- </div> -->
+
+      {% endblock %}
+    </body>
+    </html>
