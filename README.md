@@ -31,10 +31,10 @@ In this answer, I present the first version of the product in the form of POC, a
 
 ## Installation
 
-`` python
+```python
 pip install -r requirements.txt
 
-`` ``
+```
 ## Improvements and perspectives:
 This first POC addresses the client's main problem, namely the possibility of using artificial intelligence to detect the faces of clients at the entrance to the nightclub, for example. This solution makes it possible to feed a database, to present a simple interface. The most important point is that it can easily evolve into video because the DeepFace library has bricks that allow it, in addition to the use of Django and the implementation of a simple model for the database will allow to make it more complex without difficulty.
 However, this solution has limitations that must be addressed and that I have not yet integrated:
